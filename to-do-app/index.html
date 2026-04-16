@@ -9,16 +9,50 @@
 </head>
 
 <body class="bg-slate-950 flex flex-col items-center h-screen p-0.5 m-0.5 overflow-x-hidden">
-    <h1 class="text-3xl font-bold bg-linear-to-b from-slate-300 via-slate-400 to-blue-400 bg-clip-text text-transparent mt-1">
+    <h1 class="text-3xl font-bold bg-linear-to-b from-slate-300 via-slate-400 to-blue-400 bg-clip-text text-transparent mt-2">
         Welcome to Watch Me..
     </h1>
-    <h2 class="text-xl font-semibold bg-linear-to-b from-slate-50 via-slate-300 to-blue-400/90 bg-clip-text text-transparent m1-0.5">
+    <h2 class="text-xl font-semibold bg-linear-to-b from-slate-100 via-slate-300 to-blue-400/90 bg-clip-text text-transparent mt-2">
         Combine all your tasks in one place
     </h2>
 
-    <!--main container-->
-    <div>
+    <div class="flex items-center justify-center gap-3 w-[80%] h-auto mt-10 mb-4">
+        <input type="text" id="input-task" placeholder="Add new task" class="text-slate-800 font-bold w-[50%] text-base p-2 rounded-md outline-0 bg-linear-to-b from-slate-100 via-slate-200 to-slate-300" />
+        <button id="add-task" class="bg-slate-400 p-2 rounded-md text-slate-800 w-[15%] font-bold hover:bg-slate-600 hover:text-slate-100 transition duration-700 ease-in-out cursor-pointer">
+        ADD
+      </button>
+    </div>
 
+    <!--main container-->
+    <div class="w-[90%] h-auto mt-10">
+        <table class="w-full table-fixed rounded-lg overflow-hidden border border-slate-500">
+            <!--to make the width of the columns-->
+            <colgroup>
+                <col class="w-[80%]" />
+                <col class="w-[10%]" />
+                <col class="w-[10%]" />
+            </colgroup>
+
+            <thead class="bg-slate-900 text-slate-200">
+                <tr>
+                    <th class="py-3 border text-left text-transparent pl-3 bg-clip-text bg-linear-to-l from-slate-300 via-slate-200 to-blue-400">
+                        So, what we have today?
+                    </th>
+
+                    <th class="py-3 border text-center text-transparent bg-clip-text bg-linear-to-l from-slate-300 via-slate-200 to-blue-400">
+                        New Mind?
+                    </th>
+
+                    <th class="py-3 border text-center text-transparent bg-clip-text bg-linear-to-l from-slate-300 via-slate-200 to-blue-400">
+                        Finished already?
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody id="taskTable" class="divide-slate-800 bg-slate-950 divide-y text-slate-200">
+                <!--the other codes will be added here by js-->
+            </tbody>
+        </table>
     </div>
 
     <script src="./src/script.js"></script>
