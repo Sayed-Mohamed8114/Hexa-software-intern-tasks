@@ -4,8 +4,6 @@ import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import l_arrow from "../assets/icons/left-arrow.png";
 import r_arrow from "../assets/icons/right-arrow.png";
 import "react-horizontal-scrolling-menu/dist/styles.css";
-import { backgroundImage } from "flowbite-react/plugin/tailwindcss/theme";
-import { redirect } from "react-router-dom";
 
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
