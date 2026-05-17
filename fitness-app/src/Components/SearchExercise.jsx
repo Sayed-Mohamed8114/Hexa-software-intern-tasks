@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { exercisesoptions, fetchData } from "../utils/fetchData";
 import HorizontalScrollBar from "./HorizontalScrollBar";
 
-function SearchExercise() {
+function SearchExercise({setExercises,bodyPart,setBodyPart}) {
   const [search, setSearch] = useState("");
-  const [exercises, setExercises] = useState([]);
   const [bodyParts, setBodyParts] = useState([]);
 
   useEffect(() => {
@@ -39,7 +38,7 @@ function SearchExercise() {
   };
 
   return (
-    <div className="items-center justify-center w-full">
+    <div className="items-center justify-center w-[85%] ">
       <p className="bg-linear-to-l from-red-700 via-red-600 to-black bg-clip-text text-center  text-transparent font-bold font-serif text-[70px]">
         Awesome exercises <br />
         you should Know
@@ -64,7 +63,7 @@ function SearchExercise() {
       </div>
       <div className="w-full items-center justify-center">
         <div className="flex gap-2 items-center justify-center">
-          <HorizontalScrollBar data={bodyParts} />
+          <HorizontalScrollBar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} />
         </div>
       </div>
     </div>
