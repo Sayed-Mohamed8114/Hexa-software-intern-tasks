@@ -9,7 +9,7 @@ const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
   return (
     <button
-      onClick={scrollPrev}
+      onClick={scrollPrev('smooth')}
       className="flex items-center justify-center px-2 z-10 cursor-pointer"
     >
       <img src={l_arrow} alt="left arrow" className="w-10 h-10"/>
@@ -18,10 +18,10 @@ const LeftArrow = () => {
 };
 
 const RightArrow = () => {
-  const { scrollNext } = useContext(VisibilityContext);
+  const {scrollNext} = useContext(VisibilityContext);
   return (
     <button
-      onClick={scrollNext}
+      onClick={scrollNext('smooth')}
       className="flex items-center justify-center px-2 z-10 cursor-pointer"
     >
       <img src={r_arrow} alt="right arrow" className="w-10 h-10" />

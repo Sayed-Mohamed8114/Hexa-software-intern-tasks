@@ -4,10 +4,8 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="w-[90%] md:w-[80%] lg:w-[70%] h-[7vh] md:h-[10vh] items-center justify-between flex p-5 sticky top-0 z-50 bg-white/10 backdrop-blur-md
-  border-b border-white/15
-  shadow-md rounded-4xl  mt-2"
-      >
+        className="w-[90%] md:w-[70%] lg:w-[70%] h-[7vh] md:h-[10vh] items-center justify-between flex p-5 sticky top-0 z-50 bg-white/10 backdrop-blur-md
+                  border-b border-white/15 shadow-md rounded-4xl  mt-2" >
         <Link to="/">
           <img src={Logo} alt="logo" className="w-8  md:w-12 h-8 md:h-12" />
         </Link>

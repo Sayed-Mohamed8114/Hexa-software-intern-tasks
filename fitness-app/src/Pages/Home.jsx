@@ -18,7 +18,7 @@ function Home() {
       />
       <Exercises
       bodyPart={bodyPart}
-      setBodyPart={setBodyPart}
+      exercises={exercises}
       setExercises={setExercises}
       />
     </section>

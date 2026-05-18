@@ -1,4 +1,3 @@
-
 export const exercisesoptions = {
   method: "GET",
   headers: {
